@@ -6,23 +6,36 @@
     <title>Consultar Tabela</title>
 </head>
 <body>
-<div>
+    <h3>Clientes</h3>
+<div class="consulta">
+
 <?php
+
 
 $con = mysqli_connect("localhost", "root", "");
 
-$db = mysqli_select_db($con, "atv1103");
+$db = mysqli_select_db($con, "atv");
+echo "<table>";
 
+            echo "<tr>";
+            echo"<th>Nome</th>";
+            echo"<th>Idade</th>";
+            echo"<th>Ação</th>";
+            echo "</tr>";
 
 
 $sql = mysqli_query($con, "SELECT * FROM cadastro") or die(mysqli_error($con));
 
-
 while ($aux = mysqli_fetch_assoc($sql)) {
-    echo "-----------------------------------------<br />";
-    echo "Nome: " . $aux["nome"] . "<br />";
-    echo "Idade: " . $aux["idade"] . "<br />";
-}
+
+    echo "<tr>";
+                    echo "<td>" . $aux['nome'] . "</td>";
+                    echo "<td>" . $aux['idade'] . "</td>";
+                    echo "<td>" . "<a href = </a>" . "</td>";
+                    echo "</tr>";
+        }
+        echo "</table>";
+
 
 
 ?>

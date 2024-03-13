@@ -1,10 +1,69 @@
-body{
-background-color: #abcd;
-display: flex;
-margin: 0 auto;
-justify-content: center;
-font-size: 40px;
-font-style: italic;
+.consulta{
+text-align: center;
+}
+
+.btn-consulta{
+display: inline-block;
+padding: 10px 20px;
+background-color: #007BFF;
+color: white;
+text-decoration: none;
+border-radius: 5px;
+}
+.btn-consulta:hover {
+background-color: #0056b3;
+}
+
+.btn-cadastrar{
+ display: inline-block;
+padding: 10px 20px;
+background-color: #007BFF;
+color: white;
+text-decoration: none;
+border-radius: 5px;
+}
+.btn-cadastrar:hover {
+background-color: #0056b3;
+} 
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: skyblue;
+    color: black;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+tr:hover {
+	background-color: #ddd;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+a:hover {
+    color: #45a049;
+  }
+
+h3{
+color: black;
+font-size: 50px;
+background-color: skyblue;
 text-align: center;
 }
 

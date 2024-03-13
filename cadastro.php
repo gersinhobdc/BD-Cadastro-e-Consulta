@@ -1,47 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Cadastro</title>
 </head>
 <body>
     <h2>Cadastro</h2>
 
-    <style type="text/css">
-    .btn-consulta{
-    	display: inline-block;
-  		padding: 10px 20px;
- 		background-color: #007BFF;
-  		color: white;
-  		text-decoration: none;
-  		border-radius: 5px;
-    }
-    .btn-consulta:hover {
-  	background-color: #0056b3;
-	}
-	 .btn-cadastrar{
-    	display: inline-block;
-  		padding: 10px 20px;
- 		background-color: #007BFF;
-  		color: white;
-  		text-decoration: none;
-  		border-radius: 5px;
-    }
-    .btn-cadastrar:hover {
-  	background-color: #0056b3;
-	}
-
-    </style>
-
     <form method="post">
         <label for="nome">Nome:</label><br>
-        <input type="text" id="nome" name="nome"><br>
+        <input type="text" id="nome" name="nome" required minlength="5"><br>
 
         <label for="idade">Idade:</label><br>
-        <input type="text" id="idade" name="idade"><br>
+        <input type="text" id="idade" name="idade" required minlength="2"><br>
 
         </label><br><br>
         <input type="submit" value="Cadastrar" class="btn-cadastrar">
-        <a href="/atv/consultarTabela.php" id="btn-consulta" class="btn-consulta">Listar</a><br>
+        <a href="/BD-Cadastro-e-Consulta/consultarTabela.php" id="btn-consulta" class="btn-consulta">Listar</a><br><br><br>
     </form>
 
 
@@ -51,12 +26,12 @@
 $servername = "localhost";
 $nome = "root";
 $senha = "";
-$dbname = "atv1103";
+$dbname = "atv";
 
 
 $conn = new mysqli($servername, $nome, $senha, $dbname);
 
-$con = mysqli_connect("localhost", "root","", "atv1103");
+$con = mysqli_connect("localhost", "root","", "atv");
 
 // Verifica a conexão
 if ($conn->connect_error) {
